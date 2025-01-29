@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Manrope-Medium";
+    src: url(../fonts/Manrope-Medium.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Manrope-Medium;
+    background-color: darken(white, 5%);
+    font-size: 1vw;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.06vw 0.32vw 0.06vw rgba(0, 0, 0, 0.3);
+    gap: 2vw;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 2vh 2vw;
+    gap: 2vh;
+}
+
+.logo {
+    width: 7vw;
+    height: 8vh;
+}
+
+.navbar-icon {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.navbar-el {
+    display: flex;
+    align-self: center;
+}
+
+.navbar-el a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5vw;
+}
+
+.basket-el, .login-el {
+    margin-left: 0;
+    margin-right: 2vw;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-left: auto;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    gap: 2vh;
+}
