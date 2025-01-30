@@ -1,4 +1,4 @@
-import React, { lazy, useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../components/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { IMaskInput } from 'react-imask'

@@ -1,4 +1,5 @@
 import { Response } from "./constants.js"
+import { getToken } from "./tokenService.js"
 
 export async function sendOtp(url, requestBody) {
     try {
@@ -41,6 +42,32 @@ export async function signin(url, requestBody) {
 
         if (!response.ok) {
             resp.isSuccess = false
+        }
+    
+        const data = await response.json()
+        resp.response = data
+        return resp
+    }
+    catch (err) {
+        throw err
+    }
+}
+
+export async function getProfile(url) {
+    try {
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${getToken()}`
+            }
+        })
+
+        let resp = new Response()
+        resp.isSuccess = true
+
+        if (!response.ok) {
+            resp.isSuccess = false
+            return resp
         }
     
         const data = await response.json()
