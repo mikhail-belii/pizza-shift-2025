@@ -58,7 +58,7 @@ const ProfileForm = () => {
     }, [])
 
     if (loading) {
-        return <div>Данные профиля загружаются...</div>
+        return <div className='loading-text'>Данные профиля загружаются...</div>
     }
 
     if (error) {
@@ -101,6 +101,7 @@ const ProfileForm = () => {
 
     return (
         <div>
+            <h1>Профиль</h1>
             <form className="credentials">
                 <label htmlFor="lastName">Фамилия*</label>
                 <input
@@ -164,7 +165,7 @@ const ProfileForm = () => {
             {isLogoutModalOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content">
-                        <img src={questionMark} alt="question-mark"></img>
+                        <img src={questionMark} alt="question-mark" id="question-mark"></img>
                         <p>Вы точно хотите выйти?</p>
                         <div className="modal-btns">
                             <button 

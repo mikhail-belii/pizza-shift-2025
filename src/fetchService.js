@@ -106,3 +106,26 @@ export async function editProfile(url, requestBody) {
         throw err
     }
 }
+
+export async function getPizzas(url) {
+    try {
+        const response = await fetch(url, {
+            method: "GET"
+        })
+
+        let resp = new Response()
+        resp.isSuccess = true
+
+        if (!response.ok) {
+            resp.isSuccess = false
+            return resp
+        }
+    
+        const data = await response.json()
+        resp.response = data
+        return resp
+    }
+    catch (err) {
+        throw err
+    }
+}

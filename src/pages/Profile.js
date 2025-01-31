@@ -15,7 +15,6 @@ const Login = () => {
 
     return (
         <div className='body-container'>
-            <h1>Профиль</h1>
             <ProfileForm/>
            
         </div>
