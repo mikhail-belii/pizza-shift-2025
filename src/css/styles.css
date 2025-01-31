@@ -64,6 +64,10 @@ header {
     flex-direction: column;
     width: 40vw;
     gap: 2vh;
+
+    & input {
+        width: 20vw;
+    }
 }
 
 .credentials {
@@ -211,4 +215,35 @@ input {
         background-color: rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
+}
+
+#login__continue-btn, #login__login-btn {
+    color: white;
+    font-size: 1.1vw;
+    padding: 1vw 5vh;
+    width: 20vw;
+    border: none;
+    border-radius: 0.9vw;
+    cursor: pointer;
+    background-color: #f4511e;
+
+    &:hover {
+        background-color: #a63c1c;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #873016;
+        cursor: pointer;
+    }
+}
+
+#resend-code-timer {
+    opacity: 0.45;
+}
+
+#resend-code {
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0 5vw;
 }

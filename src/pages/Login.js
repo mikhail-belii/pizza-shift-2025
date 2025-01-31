@@ -114,7 +114,7 @@ const Login = () => {
                         lazy={true}
                         inputMode='numeric'
                     />
-                    <button onClick={handleContinue}>Продолжить</button>
+                    <button onClick={handleContinue} id='login__continue-btn'>Продолжить</button>
                 </div>
             )}
 
@@ -135,11 +135,11 @@ const Login = () => {
                         lazy={true}
                         inputMode='numeric'
                     />
-                    <button onClick={handleLogin}>Войти</button>
+                    <button onClick={handleLogin} id='login__login-btn'>Войти</button>
                     {resendTimer > 0 ? (
-                        <p>Запросить код повторно можно через {resendTimer} секунд</p>
+                        <p id='resend-code-timer'>Запросить код повторно можно через {resendTimer} секунд</p>
                     ) : (
-                        <p onClick={handleResendCode}>Запросить код ещё раз</p>
+                        <p onClick={handleResendCode} id='resend-code'>Запросить код ещё раз</p>
                     )}
                 </div>
             )}
