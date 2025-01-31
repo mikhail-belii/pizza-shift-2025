@@ -78,3 +78,31 @@ export async function getProfile(url) {
         throw err
     }
 }
+
+export async function editProfile(url, requestBody) {
+    try {
+        const response = await fetch(url, {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${getToken()}`
+            },
+            body: requestBody
+        })
+
+        let resp = new Response()
+        resp.isSuccess = false
+
+        if (response.ok) {
+            resp.isSuccess = true
+            return resp
+        }
+    
+        const data = await response.json()
+        resp.response = data
+        return resp
+    }
+    catch (err) {
+        throw err
+    }
+}

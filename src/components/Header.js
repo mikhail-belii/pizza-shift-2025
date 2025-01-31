@@ -35,7 +35,7 @@ const Header = () => {
                         <Link to="/basket"><img src={basket} className='navbar-icon' alt='basket'></img>Корзина</Link>
                     </div>
                     <div className='navbar-el login-el'>
-                        <Link to="/signin"><img src={login} className='navbar-icon' alt='login'></img>Вход</Link>
+                        <Link to="/signin"><img src={login} className='navbar-icon' alt='login'></img>Войти</Link>
                     </div>
                 </div>
 
